@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1020561074920",
+    "project_id": "agbebel",
+    "storage_bucket": "agbebel.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1020561074920:android:2857f61c63220249df375d",
+        "android_client_info": {
+          "package_name": "com.example.agbebel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfbqEgrJKdY-Jt82d3aefDVeY5NoqjWC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
