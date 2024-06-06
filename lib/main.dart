@@ -7,6 +7,8 @@ import 'package:agbebel/firebase_options.dart';
 
 
 // Paginas do Projeto
+import 'package:agbebel/view/sobre.dart';
+import 'package:agbebel/view/inicial.dart';
 import 'package:agbebel/widgets/navBar.dart';
 
 Future<void> main() async {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 // Paginas
+import 'package:agbebel/view/PrincipalView.dart';
 
 class navBar extends StatefulWidget {
   const navBar({super.key});

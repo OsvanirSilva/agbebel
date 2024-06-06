@@ -4,13 +4,13 @@ import 'package:flutter/material.dart';
 
 // Firebase
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:zoiao/controller/vendaController.dart';
+import 'package:agbebel/controller/agendarController.dart';
 
 // Controller
 import '../controller/loginController.dart';
 
 // Model
-import '../model/venda.dart';
+import '../model/agendar.dart';
 
 class PrincipalView extends StatefulWidget {
   const PrincipalView({super.key});
@@ -44,7 +44,7 @@ class _PrincipalViewState extends State<PrincipalView> {
         //
         child: StreamBuilder<QuerySnapshot>(
           //fluxo de dados
-          stream: vendaController().listar().snapshots(),
+          stream: AgendarController().listar().snapshots(),
 
           //exibição dos dados
           builder: (context, snapshot) {
@@ -100,7 +100,7 @@ class _PrincipalViewState extends State<PrincipalView> {
                               IconButton(
                                 icon: Icon(Icons.delete_outlined),
                                 onPressed: () {
-                                  vendaController().excluir(context, id);
+                                  AgendarController().excluir(context, id);
                                 },
                               ),
                             ],
@@ -210,7 +210,7 @@ class _PrincipalViewState extends State<PrincipalView> {
               child: Text("salvar"),
               onPressed: () {
                 //instanciar um OBJETO Tarefa
-                var v = Venda(
+                var v = Agendar(
                   LoginController().idUsuario(),
                   txtnota_fiscal.text,
                   txtcodigo_oculos.text,
@@ -221,10 +221,10 @@ class _PrincipalViewState extends State<PrincipalView> {
 
                 if (docId == null) {
                   //adicionar tarefa
-                  vendaController().adicionar(context, v);
+                  AgendarController().adicionar(context, v);
                 } else {
                   //atualizar tarefa
-                  vendaController().atualizar(context, docId, v);
+                  AgendarController().atualizar(context, docId, v);
                 }
 
                 //limpar os campos de texto
